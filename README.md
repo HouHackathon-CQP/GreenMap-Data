@@ -40,6 +40,86 @@ Bounding Box: (20.57, 105.28, 21.39, 106.02)
 └─────────────────────────────────────┘
 ```
 
+## ⚙️ Thiết lập môi trường (Khuyến nghị) 
+
+### Tại sao cần Môi trường ảo (Virtual Environment)?
+
+✅ **Lợi ích:**
+- **Cô lập dự án**: Các package cài đặt cho dự án này **không ảnh hưởng** đến Python toàn hệ thống
+- **Quản lý phiên bản**: Dễ kiểm soát phiên bản package cho từng dự án
+- **Tránh xung đột**: Hai dự án khác nhau có thể dùng các phiên bản package khác nhau
+- **Dễ chia sẻ**: Dễ dàng chia sẻ project cho người khác mà không sợ thiếu dependencies
+
+### 🛠️ Hướng dẫn tạo Virtual Environment
+
+#### Trên **Windows** (PowerShell hoặc Command Prompt):
+
+```bash
+# 1. Mở Command Prompt hoặc PowerShell
+# 2. Di chuyển vào thư mục project
+cd D:\GreenMap\GreenMap-Data
+
+# 3. Tạo virtual environment
+python -m venv venv
+
+# 4. Kích hoạt virtual environment
+# Với Command Prompt:
+venv\Scripts\activate
+
+# Hoặc với PowerShell:
+venv\Scripts\Activate.ps1
+
+# 5. Cài đặt các thư viện cần thiết (khi venv đã kích hoạt)
+pip install requests pandas folium jupyter
+
+# 6. Mở Jupyter Notebook
+jupyter notebook
+```
+
+#### Trên **macOS/Linux**:
+
+```bash
+# 1. Mở Terminal
+# 2. Di chuyển vào thư mục project
+cd ~/GreenMap/GreenMap-Data
+
+# 3. Tạo virtual environment
+python3 -m venv venv
+
+# 4. Kích hoạt virtual environment
+source venv/bin/activate
+
+# 5. Cài đặt các thư viện cần thiết (khi venv đã kích hoạt)
+pip install requests pandas folium jupyter
+
+# 6. Mở Jupyter Notebook
+jupyter notebook
+```
+
+### ✅ Kiểm tra Virtual Environment đã kích hoạt
+
+Khi virtual environment đã kích hoạt, bạn sẽ thấy `(venv)` ở đầu dòng lệnh:
+
+```
+(venv) D:\GreenMap\GreenMap-Data>
+```
+
+hoặc
+
+```
+(venv) ~/GreenMap/GreenMap-Data $
+```
+
+### 🧹 Thoát khỏi Virtual Environment
+
+Để thoát khỏi virtual environment, chỉ cần gõ:
+
+```bash
+deactivate
+```
+
+---
+
 ## 🚀 Hướng dẫn bắt đầu nhanh
 
 ### Cách 1: Tự động (Khuyến nghị) 🤖
@@ -51,10 +131,18 @@ Sử dụng Jupyter Notebook để tự động tải dữ liệu:
 git clone https://github.com/HouHackathon-CQP/GreenMap-Data.git
 cd GreenMap-Data
 
-# 2. Cài đặt thư viện cần thiết
-pip install requests pandas folium
+# 2. Tạo và kích hoạt virtual environment (Windows)
+python -m venv venv
+venv\Scripts\activate
 
-# 3. Mở và chạy notebook
+# Hoặc trên macOS/Linux:
+python3 -m venv venv
+source venv/bin/activate
+
+# 3. Cài đặt thư viện cần thiết (trong virtual environment)
+pip install requests pandas folium jupyter
+
+# 4. Mở và chạy notebook
 jupyter notebook data_collection.ipynb
 ```
 
