@@ -287,6 +287,10 @@ Dự án được phát hành dưới giấy phép [Apache 2.0](LICENSE).
 
 Dữ liệu OpenStreetMap được sử dụng theo [Open Database License (ODbL)](https://www.openstreetmap.org/copyright).
 
+## Contributors
+
+Dự án này được phát triển bởi HouHackathon-CQP.
+
 ## 👥 Đóng góp
 
 Chúng tôi hoan nghênh mọi đóng góp! Hãy mở Issue hoặc Pull Request nếu bạn muốn cải thiện dự án.
